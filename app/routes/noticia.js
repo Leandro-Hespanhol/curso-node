@@ -1,10 +1,9 @@
-module.exports = (app) => {
-  // a prox variávio irá receber o exportado no dbConnection
-  app.get('/noticia', function (req, res) {
-    var connection = app.config.dbConnection();
-    var noticiasModel = app.app.models.noticiasModel;
+module.exports = (application) => {
+  application.get('/noticia', function (req, res) {
+    var connection = application.config.dbConnection();
+    var noticiasModel = new application.app.models.NoticiasDAO(connection);
 
-    noticiasModel.getNoticia(connection, function (error, result) {
+    noticiasModel.getNoticia(function (error, result) {
       res.render('noticias/noticia', { noticia: result });
     });
   });

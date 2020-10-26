@@ -9,6 +9,5 @@ var connmysql = function () {
   });
 };
 module.exports = function () {
-  console.log('o autoload carregou o código de conexão com o bd');
   return connmysql;
 };
