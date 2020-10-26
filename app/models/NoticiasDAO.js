@@ -20,3 +20,5 @@ NoticiasDAO.prototype.salvarNoticia = function (noticia, callback) {
 module.exports = function () {
   return NoticiasDAO;
 };
+
+console.log('olá git');
