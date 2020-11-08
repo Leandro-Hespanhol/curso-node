@@ -1,13 +1,14 @@
 var mysql = require('mysql');
 
-var connmysql = function () {
-  return mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'dado20',
-    database: 'portal_noticias',
-  });
-};
+var connMySQL = function(){
+	return mysql.createConnection({
+		host : 'localhost',
+		user : 'root',
+		password : '1234',
+		database : 'portal_noticias'
+	});
+}
+
 module.exports = function () {
-  return connmysql;
-};
+	return connMySQL;
+}
